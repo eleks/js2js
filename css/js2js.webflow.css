@@ -227,6 +227,7 @@ p {
   padding-bottom: 33px;
   background-image: url(../images/sunrise_blue_mountains_landscapes_nature_valleys_fog_1920x1080_48559.jpg);
   background-attachment: fixed;
+  background-size: 100% auto;
 }
 .subtitle {
   margin-bottom: 18px;
@@ -482,6 +483,7 @@ p {
   .hero-bg {
     background-image: url(../images/nature_sun_silhouette_plants_bokeh_macro_blurred_background_1920x1080_47523.jpg);
     background-attachment: fixed;
+    background-size: 100% auto;
   }
   .snippet {
     -webkit-transform: none;
@@ -544,6 +546,7 @@ p {
     padding-right: 10px;
     padding-left: 10px;
     background-image: url(../images/nature_sun_silhouette_plants_bokeh_macro_blurred_background_1920x1080_47523.jpg);
+    background-size: 100% auto;
   }
   .snippet {
     margin-bottom: 19px;
@@ -595,6 +598,7 @@ p {
   }
   .hero-bg {
     background-image: url(../images/nature_sun_silhouette_plants_bokeh_macro_blurred_background_1920x1080_47523.jpg);
+    background-size: 100% auto;
   }
   .section-description {
     width: 50%;
