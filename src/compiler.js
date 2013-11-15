@@ -7,9 +7,9 @@ var Js2JsCompiler = function(logger, verbose) {
 	this._verbose = verbose;
 };
 
-Js2JsCompiler.prototype.compile = function(inputLocation, outputLocation) {
+Js2JsCompiler.prototype.compile = function(inputLocation, outputLocation, options) {
 	var input = fs.lstatSync(inputLocation);
-	if(fs.existsSync(outputLocation)) {
+	if(!options.force && fs.existsSync(outputLocation)) {
 		return err('Output location already exists. Please remove it before compilation.');
 	}
 	if(input.isFile()) {
