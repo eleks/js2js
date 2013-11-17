@@ -10,7 +10,7 @@ var Js2JsCompiler = function(logger, verbose, forceOverwrite) {
 
 Js2JsCompiler.prototype.compile = function(inputLocation, outputLocation) {
 	if (inputLocation === outputLocation) {
-		return err('Your code is already js2js-compiled. My work here is done.');
+		return err('Your code is already php2php-compiled. My work here is done.');
 	}
 	if (!this._forceOverwrite && fs.existsSync(outputLocation)) {
 		return err('Output location already exists. Please remove it before usage (or use The --force).');
@@ -57,7 +57,7 @@ Js2JsCompiler.prototype.compileCode = function(code) {
 };
 
 Js2JsCompiler.prototype.copyFile = function(inputFile, outputFile) {
-	this._logIfVerbose('Non JS file. Copying ' + inputFile + '...');
+	this._logIfVerbose('Non PHP file. Copying ' + inputFile + '...');
 	var code = fs.readFileSync(inputFile);
 	fs.writeFileSync(outputFile, code);
 	this._logIfVerbose('Output is written to: ' + outputFile);
@@ -65,7 +65,7 @@ Js2JsCompiler.prototype.copyFile = function(inputFile, outputFile) {
 };
 
 Js2JsCompiler.prototype.compileFile = function(inputFile, outputFile) {
-	if (!endsWith(inputFile, '.js')) {
+	if (!endsWith(inputFile, '.php')) {
 		this.copyFile(inputFile, outputFile);
 		return ok();
 	}
