@@ -24,7 +24,7 @@ optionParser.addOption('f', 'force', 'Overwrite existing output files')
 			.action(function() {
 				FORCE = true;
 });
-optionParser.addOption('d', 'decompile', 'Decompile js2js-powered JS back to original JS.')
+optionParser.addOption('d', 'decompile', 'Decompile php2php-powered PHP back to original PHP.')
             .action(function() {
                 DECOMPILE = true;
 });
@@ -59,5 +59,5 @@ function printHelp() {
 }
 
 function printGreeting() {
-	console.log('Welcome to js2js compiler.');
+	console.log('Welcome to php2php compiler.');
 }
