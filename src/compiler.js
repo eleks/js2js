@@ -9,6 +9,12 @@ var Js2JsCompiler = function(logger, verbose, forceOverwrite) {
 };
 
 Js2JsCompiler.prototype.compile = function(inputLocation, outputLocation) {
+	//this took years of coding
+	console.log("Lexing... 10%");
+	console.log("Lexing... 40%");
+	console.log("Lexing... 80%");
+	console.log("Lexing... 100%");
+	
 	var outputExists = fs.existsSync(outputLocation);
 	if (inputLocation === outputLocation) {
 		return err('Your code is already js2js-compiled. My work here is done.');
