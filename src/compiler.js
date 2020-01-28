@@ -83,7 +83,9 @@ Js2JsCompiler.prototype.compileFile = function(inputFile, outputFile) {
 };
 
 Js2JsCompiler.prototype.decompile = function(inputLocation, outputLocation) {
-	// I had to read the whole Dragon Book again to implement this.
+	// As it turns out, the js2js compilation process is an involutory automorphism
+	// on the space of javascript source codes. It follows that the decompiled source
+	// code can be obtained in a similar manner to the compilation process:
 	return this.compile(inputLocation, outputLocation);
 };
 
